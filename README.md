@@ -32,9 +32,11 @@ go get -u github.com/labstack/echo
 
 전체 소스 보기에 앞서 코드를 간단히 설명 드립니다.
 - `e := echo.New()`: 에코 객체 생성
-- `e.Static("/", "assets")`: asset 등록, 위 `assets 디렉토리`를 `/`로 인식하도록 합니다. 예를 들어, html 에서 /image/picture.png 등을 설정하실때 사용하시면 됩니다. 
--	`e.Static("/js", "js")`: js 등록, 위 `js 디렉토리`를 `/js`로 인식하도록 합니다. 예를 들어, html 에서 /js/xxx.js 등을 설정하실때 사용하시면 됩니다. 
--	`e.Static("/css", "css")`: css 등록, 위 `css 디렉토리`를 `/css`로 인식하도록 합니다. 예를 들어, html 에서 /css/xxx.css 등을 설정하실때 사용하시면 됩니다. 
+
+Static이 동작안 하는것 같음..
+- ~~`e.Static("/", "assets")`: asset 등록, 위 `assets 디렉토리`를 `/`로 인식하도록 합니다. 예를 들어, html 에서 /image/picture.png 등을 설정하실때 사용하시면 됩니다.~~
+- ~~`e.Static("/js", "js")`: js 등록, 위 `js` 디렉토리`를 `/js`로 인식하도록 합니다. 예를 들어, html 에서 /js/xxx.js 등을 설정하실때 사용하시면 됩니다.~~
+- ~~`e.Static("/css", "css")`: css 등록, 위 `css 디렉토리`를 `/css`로 인식하도록 합니다. 예를 들어, html 에서 /css/xxx.css 등을 설정하실때 사용하시면 됩니다.~~
 - `e.File("/", "public/index.html")`: 브라우저에서 `/` 요청시, `public/index.html`을 제공합니다.
 ` `e.GET("/aaa", Index)`: Render를 통해 `aaa.html` 또는 `hello.html`을 렌더링하여 제공합니다.
 - `e.Logger.Fatal(e.Start(":8000"))`: 서버를 8000 포트로 시작하고, Logger에 등록합니다.
