@@ -42,6 +42,8 @@ func main() {
 	e.Static("/js", "js")
 	e.Static("/css", "css")
 	e.File("/", "public/index.html")
+
+	// Render
 	e.GET("/aaa", Index)
 	e.GET("/hello", Hello)
 
