@@ -39,7 +39,9 @@ go get -u github.com/labstack/echo
 ` `e.GET("/aaa", Index)`: Render를 통해 `aaa.html` 또는 `hello.html`을 렌더링하여 제공합니다.
 - `e.Logger.Fatal(e.Start(":8000"))`: 서버를 8000 포트로 시작하고, Logger에 등록합니다.
 
-Goland에서 개발시, Static 설정을 해줬음에도 IDE에서는 경로를 찾을 수 없다고 뜨네요... (웹 개발시에는 역시 캐시 비움 새로고침을 생활화 해야하네요 ㅠ)
+Goland에서 개발시, Static 설정을 해줬음에도 IDE에서는 Highlight 표시가 되네요..
+
+**주의!! Working directory 설정 확인하셔요.** 저는 GoLand에서 실행 할 때 `Run Configuration`에서 Working directory 설정 확인 확인하지 않아서 경로 문제로 꽤 오랜시간을 허비했네요 ㅠ
 
 ```
 package main
